@@ -1,0 +1,232 @@
+/* Fuentes personalizadas */
+@font-face {
+    font-family: "Candela";
+    src: url("../css/fonts/CandelaItalic.otf");
+}
+
+@font-face {
+    font-family: "icons";
+    src: url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"),
+         url("fonts/websymbols-regular-webfont.eot");
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("fonts/websymbols-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Patrón de fondo */
+body {
+    background-image: url("../img/pattern.png");
+}
+
+/* Cabecera */
+header {
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Caja del logotipo */
+header #logotipo {
+    background-color: #cccc32;
+    border-radius: 999px;
+    box-shadow: 2px 2px 4px gray;
+    height: 130px;
+    margin: 0 auto;
+    transition: all 150ms;
+    width: 130px;
+}
+
+/* Caja del logotipo con cursor sobre él */
+header #logotipo:hover {
+    box-shadow: 2px 2px 4px gray, 0px 0px 5px #cccc32;
+    cursor: pointer;
+}
+
+/* Imagen del logotipo */
+header #logotipo img {
+    margin-bottom: 10px;
+    margin-top: 13px;
+}
+
+/* Texto del logotipo */
+header h1 {
+    color: #cccc32;
+    font-family: "Candela";
+    font-size: 50px;
+    letter-spacing: 4px;
+    margin-top: 15px;
+    text-shadow: 0px 2px 2px #333;
+}
+
+/* Texto del logotipo con cursor sobre él */
+header h1:hover {
+    text-shadow: 0px 2px 2px #333, 0px 0px 5px #cccc32;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #333;
+    box-shadow: 0px 0px 2px gray;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 14px;
+    height: 40px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+nav > ul {
+    margin: 0 auto;
+    width: 100%;
+}
+
+nav > ul > li {
+    border-right: 1px solid gray;
+    float: left;
+    line-height: 40px;
+    transition: all 400ms;
+}
+
+nav > ul > li:first-child {
+    border-left: 1px solid gray;
+}
+
+nav > ul > li:hover {
+    background-color: #cccc32;
+    box-shadow: 0px 0px 4px #8b8b1d inset;
+}
+
+nav > ul > li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    width: 160px;
+}
+
+/* Menú desplegable */
+nav > ul > li > ul {
+    box-shadow: 0px 2px 2px gray;
+    display: none;
+    position: absolute;
+    width: 160px;
+    z-index: 1;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+}
+
+nav > ul > li:hover > ul > li {
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 13px;
+}
+
+nav > ul > li:hover > ul > li a {
+    color: #666;
+}
+
+nav > ul > li:hover > ul > li:hover {
+    box-shadow: 0px 0px 6px #b6b5b5 inset;
+}
+
+/* Contenido */
+section {
+    background-color: #c0cfa3;
+    min-height: 300px;
+    width: 100%;
+}
+
+.ini {
+    line-height: 1px;
+}
+
+/* Pié de página */
+footer {
+    background-color: #333;
+    box-shadow: 0px 0px 2px #333;
+    color: gray;
+    min-height: 300px;
+}
+
+footer h4 {
+    color: #ccc;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#contactme {
+    float: left;
+    margin-top: 40px;
+    margin-left: 10%;
+    width: 40%;
+}
+
+#contactme .icon {
+    font-family: "icons";
+    margin-right: 10px;
+}
+
+strong {
+    font-size: 15px;
+}
+
+.datos {
+    font-size: 14px;
+}
+
+#contactme #tele, #contact #mail {
+    font-size: 14px;
+}
+
+#contactme p {
+    margin-bottom: 20px;
+}
+
+#followme {
+    float: left;
+    margin-top: 40px;
+    margin-left: 10%;
+    width: 40%;
+}
+
+#followme a {
+    border: 1px solid gray;
+    border-radius: 999px;
+    display: block;
+    float: left;
+    font-family: "icons";
+    font-size: 25px;
+    height: 45px;
+    line-height: 40px;
+    margin-right: 30px;
+    text-indent: 10px;
+    width: 45px;
+}
+
+#followme a:hover {
+    box-shadow: 0px 0px 4px #c0cfa3;
+    color: #c0cfa3;
+    text-shadow: 0px 0px 1px gray;
+}
+
+#copyright {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#copyright a {
+    color: #cccc32;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}

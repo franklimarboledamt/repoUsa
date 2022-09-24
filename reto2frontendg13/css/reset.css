@@ -1,0 +1,49 @@
+/* Generales */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    background-color: transparent;
+}
+
+body {
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+/* Enlaces */
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Botones */
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
+    border: none;
+    border-radius: 0;
+    color: inherit;   /* Hereda el color del padre */
+    cursor: pointer;
+    outline: inherit;   /* Hereda el borde del padre */
+    padding: 0;
+}
+
+/* Listas */
+ol, ul {
+    list-style: none;
+}
+
+/* Elementos enfocados */
+:focus {
+    outline: 0;   /* Quita el estilo del navegador */
+}
+
+/* Limpiar flotados */
+.clearfix {
+    float: none;
+    clear: both;
+}

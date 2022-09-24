@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Header -->
+
+<head>
+   <!-- Characters -->
+   <meta charset="utf-8">
+
+   <!-- Title -->
+   <title>franklim's boat</title>
+
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/index.css">
+
+   <!-- jquery -->
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+   <!-- ajax -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<!-- Cuerpo -->
+
+<body>
+
+   <!-- Incluir header.html -->
+   <div class="header"></div>
+
+   <!-- Incluir header.html -->
+   <div class="navigation"></div>
+
+   <!-- Contenido -->
+   <section id="index">
+      <p>boats</p>
+   </section>
+   <!-- Fin de contenido -->
+
+   <!-- Incluir header.html -->
+   <div class="footer"></div>
+
+   <script>
+      $(document).ready(function () {
+         $('.header').load('include/header.html');
+      });
+      $(document).ready(function () {
+         $('.navigation').load('include/navigation.html');
+      });
+      $(document).ready(function () {
+         $('.footer').load('include/footer.html');
+      });
+   </script>
+   <!--<script type="text/javascript" src="js/peticiones.js"></script>-->
+
+</body>
+
+</html>
