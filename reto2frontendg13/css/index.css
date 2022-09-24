@@ -1,0 +1,29 @@
+/* Contenido de la página index.html */
+section#index p {
+    color: #333;
+    font-size: 90px;
+    line-height: 250px;
+    animation-name: desplazamiento;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Animaciones */
+@keyframes desplazamiento {
+    0% {
+        margin-left: 1%;
+    }
+
+    30% {
+        display: none;
+    }
+
+    40% {
+        display: block;
+    }
+
+    100% {
+        margin-left: 94%;
+    }
+}
