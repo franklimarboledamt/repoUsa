@@ -7,7 +7,7 @@
    <meta charset="utf-8">
 
    <!-- Title -->
-   <title>franklim's boat</title>
+   <title>G13's boat</title>
 
    <!-- Stylesheets -->
    <link rel="stylesheet" href="css/reset.css">
@@ -15,23 +15,38 @@
    <link rel="stylesheet" href="css/index.css">
 </head>
 
-<!-- Cuerpo -->
+<!-- Body -->
 
 <body>
 
-   <!-- Incluir header.html -->
-   <div class="header"></div>
+   <!-- Include header.html -->
+   <div class="headerNoLogo"></div>
 
-   <!-- Incluir header.html -->
+   <!-- Include header.html -->
    <div class="navigation"></div>
 
-   <!-- Contenido -->
-   <section id="index">
-      <p>boats</p>
+   <!-- Content -->
+   <section id="contenido">
+      <div id="formulario">
+         <table class="table">
+            <thead>
+               <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Age</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+               </tr>
+            </thead>
+            <tbody id="listaClientes">
+            </tbody>
+         </table>
+      </div>
    </section>
    <!-- Fin de contenido -->
 
-   <!-- Incluir header.html -->
+   <!-- Include header.html -->
    <div class="footer"></div>
 
    <!-- jquery -->
@@ -40,7 +55,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
    <script>
       $(document).ready(function () {
-         $('.header').load('include/header.html');
+         $('.headerNoLogo').load('include/headerNoLogo.html');
       });
       $(document).ready(function () {
          $('.navigation').load('include/navigation.html');
@@ -49,7 +64,7 @@
          $('.footer').load('include/footer.html');
       });
    </script>
-   <!--<script type="text/javascript" src="js/peticiones.js"></script>-->
+   <script type="text/javascript" src="js/requests.js"></script>
 
 </body>
 
