@@ -7,7 +7,7 @@
 @font-face {
     font-family: "icons";
     src: url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"),
-         url("fonts/websymbols-regular-webfont.eot");
+        url("fonts/websymbols-regular-webfont.eot");
     src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
         url("fonts/websymbols-regular-webfont.woff") format("woff"),
         url("fonts/websymbols-regular-webfont.ttf") format("truetype");
@@ -78,28 +78,28 @@ nav {
     width: 100%;
 }
 
-nav > ul {
+nav>ul {
     margin: 0 auto;
     width: 100%;
 }
 
-nav > ul > li {
+nav>ul>li {
     border-right: 1px solid gray;
     float: left;
     line-height: 40px;
     transition: all 400ms;
 }
 
-nav > ul > li:first-child {
+nav>ul>li:first-child {
     border-left: 1px solid gray;
 }
 
-nav > ul > li:hover {
+nav>ul>li:hover {
     background-color: #cccc32;
     box-shadow: 0px 0px 4px #8b8b1d inset;
 }
 
-nav > ul > li a {
+nav>ul>li a {
     display: block;
     color: #fff;
     text-align: center;
@@ -107,7 +107,7 @@ nav > ul > li a {
 }
 
 /* Menú desplegable */
-nav > ul > li > ul {
+nav>ul>li>ul {
     box-shadow: 0px 2px 2px gray;
     display: none;
     position: absolute;
@@ -115,21 +115,21 @@ nav > ul > li > ul {
     z-index: 1;
 }
 
-nav > ul > li:hover > ul {
+nav>ul>li:hover>ul {
     display: block;
 }
 
-nav > ul > li:hover > ul > li {
+nav>ul>li:hover>ul>li {
     background-color: #f2f1f0;
     border-bottom: 1px solid #d6d6d6;
     font-size: 13px;
 }
 
-nav > ul > li:hover > ul > li a {
+nav>ul>li:hover>ul>li a {
     color: #666;
 }
 
-nav > ul > li:hover > ul > li:hover {
+nav>ul>li:hover>ul>li:hover {
     box-shadow: 0px 0px 6px #b6b5b5 inset;
 }
 
@@ -178,7 +178,8 @@ strong {
     font-size: 14px;
 }
 
-#contactme #tele, #contact #mail {
+#contactme #tele,
+#contact #mail {
     font-size: 14px;
 }
 
@@ -229,4 +230,120 @@ strong {
 .clearfix {
     float: none;
     clear: both;
+}
+
+section#contact #formulario {
+    background-color: #fff;
+    border: 1px solid #9fa88c;
+    box-shadow: 0px 0px 3px #808080;
+    color: #333;
+    font-size: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    padding: 20px;
+    width: 40%;
+}
+
+section#contact #formulario .fila {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section#contact #formulario label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    padding: 10px;
+    width: 90%;
+    ;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    box-shadow: 0px 0px 4px #c0cfa3;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+#enviar {
+    text-align: center;
+}
+
+input[type="button"],
+button,
+.linkBtn {
+    background-color: #cccc32;
+    border: 1px solid #8b8b1d;
+    border-radius: 3px;
+    padding: 5px;
+    transition: all 200ms;
+    width: 60px;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+}
+
+input[type="button"]:hover,
+button,
+.linkBtn {
+    box-shadow: 0px 0px 3px #8b8b1d;
+}
+
+.btn-editar {
+    background-color: #9fa88c;
+}
+
+.btn-eliminar {
+    background-color: firebrick;
+    color: whitesmoke;
+}
+
+#titleClient {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.table {
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.table thead {
+    border-bottom: 1px solid black;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+}
+
+.table td {
+    text-align: center;
+    width: 200px;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#linkBtnCancelar {
+    font-size: 13px;
 }

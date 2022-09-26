@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Header -->
+
+<head>
+   <!-- Characters -->
+   <meta charset="utf-8">
+
+   <!-- Title -->
+   <title>franklim's boat</title>
+
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- Cuerpo -->
+
+<body>
+
+   <!-- Incluir header.html -->
+   <div class="headerNoLogo"></div>
+
+   <!-- Incluir header.html -->
+   <div class="navigation"></div>
+
+   <!-- Contenido -->
+   <section id="contact">
+      <div class="ini">.</div>
+      <div id="formulario">
+         <h2 id="titleClient">Add Client</h2>
+         <form>
+            <div class="fila">
+               <label for="id">ID</label>
+               <input type="text" name="id" id="id">
+            </div>
+            <div class="fila">
+               <label for="name">NAME</label>
+               <input type="text" name="name" id="name">
+            </div>
+            <div class="fila">
+               <label for="email">EMAIL</label>
+               <input type="text" name="email" id="email">
+            </div>
+            <div class="fila">
+               <label for="age">AGE</label>
+               <input type="text" name="age" id="age">
+            </div>
+            <div class="fila" id="enviar">
+               <input onclick="guardarCliente()" type="button" value="Save" id="btnGuardar">
+               <input onclick="editarCliente()" type="button" value="Edit" class="ocultar" id="btnEditar">
+               <a href="clients.html" class="linkBtn ocultar" id="linkBtnCancelar">Cancel</a>
+            </div>
+         </form>
+      </div>
+      <div>.</div>
+   </section>
+   <!-- Fin de contenido -->
+
+   <!-- Incluir header.html -->
+   <div class="footer"></div>
+
+   <!-- jquery 
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+   <!-- ajax -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $('.headerNoLogo').load('include/headerNoLogo.html');
+      });
+      $(document).ready(function () {
+         $('.navigation').load('include/navigation.html');
+      });
+      $(document).ready(function () {
+         $('.footer').load('include/footer.html');
+      });
+   </script>
+   <script type="text/javascript" src="js/requests.js"></script>
+   <script type="text/javascript" src="js/newClient.js"></script>
+
+</body>
+
+</html>
