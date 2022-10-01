@@ -35,21 +35,17 @@ window.onload = function () {
    if (valores) {
       // Extraemos los valores del array
       var id = valores['id'];
-      var name = valores['name'];
-      var email = valores['email'];
-      var age = valores['age'];
+      var messagetext = valores['messagetext'];
 
       // Cargar las cajas de texto con los valores
       $("#id").val(id);
-      $("#name").val(name);
-      $("#email").val(email);
-      $("#age").val(age);
+      $("#messagetext").val(messagetext);
 
       // Desabilitar la caja de texto del 'id'
       $("#id").prop('disabled', true);
 
       // Cambiar título del formulario
-      $("#subTitle").text("Edit Client");
+      $("#subTitle").text("Edit Message");
 
       // Mostrar botón 'Editar' y ocultar 'Guardar'
       $("#btnEditar").addClass("mostrar");

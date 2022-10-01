@@ -28,28 +28,32 @@
    <section id="contact">
       <div class="ini">.</div>
       <div id="formulario">
-         <h2 id="subTitle">Add Client</h2>
+         <h2 id="subTitle">Add Boat</h2>
          <form>
             <div class="fila">
                <label for="id">ID</label>
                <input type="text" name="id" id="id">
             </div>
             <div class="fila">
+               <label for="name">BRAND</label>
+               <input type="text" name="brand" id="brand">
+            </div>
+            <div class="fila">
+               <label for="email">MODEL</label>
+               <input type="text" name="model" id="model">
+            </div>
+            <div class="fila">
+               <label for="age">CATEGORY</label>
+               <input type="text" name="category_id" id="category_id">
+            </div>
+            <div class="fila">
                <label for="name">NAME</label>
                <input type="text" name="name" id="name">
             </div>
-            <div class="fila">
-               <label for="email">EMAIL</label>
-               <input type="text" name="email" id="email">
-            </div>
-            <div class="fila">
-               <label for="age">AGE</label>
-               <input type="text" name="age" id="age">
-            </div>
             <div class="fila" id="enviar">
-               <input onclick="guardarCliente()" type="button" value="Save" id="btnGuardar">
-               <input onclick="editarCliente()" type="button" value="Edit" class="ocultar" id="btnEditar">
-               <a href="clients.html" class="linkBtn ocultar" id="linkBtnCancelar">Cancel</a>
+               <input onclick="guardarBarco()" type="button" value="Save" id="btnGuardar">
+               <input onclick="editarBarco()" type="button" value="Edit" class="ocultar" id="btnEditar">
+               <a href="boats.html" class="linkBtn ocultar" id="linkBtnCancelar">Cancel</a>
             </div>
          </form>
       </div>
@@ -75,8 +79,8 @@
          $('.footer').load('include/footer.html');
       });
    </script>
-   <script type="text/javascript" src="js/requestsClients.js"></script>
-   <script type="text/javascript" src="js/newClient.js"></script>
+   <script type="text/javascript" src="js/requestsBoats.js"></script>
+   <script type="text/javascript" src="js/newBoat.js"></script>
 
 </body>
 

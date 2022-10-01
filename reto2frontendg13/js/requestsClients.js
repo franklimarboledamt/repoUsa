@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", leerClientes);
 function leerClientes() {
    //FUNCION GET
    $.ajax({
-      url: "https://g32094389cdb338-cabana.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
+      url: "https://gd548c9243e8650-g7ri4s1qk8952qk0.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
       type: "GET",
       dataType: "json",
       success: function (clientes) {
@@ -26,10 +26,11 @@ function leerClientes() {
             MyTBody += "<tr>";
             MyTBody += "<th scope=\"row\" class=\"scope\">" + cs[i].id + "</th>";
             MyTBody += "<td>" + cs[i].name + "</td>";
-            MyTBody += "<td>" + cs[i].email + "</td>";
-            MyTBody += "<td>" + cs[i].age + "</td>";
-            MyTBody += `<td><a class='linkBtn' href='newClient.html?id=${cs[i].id}&name=${cs[i].name}&email=${cs[i].email}&age=${cs[i].age}' class='btn-editar'>Editar</a></td>`;
-            MyTBody += `<td><button onclick='eliminarCliente(${cs[i].id})' class='btn-eliminar'>Eliminar</button></td>`;
+            //MyTBody += "<td>" + cs[i].email + "</td>";
+            //MyTBody += "<td>" + cs[i].age + "</td>";
+            MyTBody += `<td><a class='linkBtn' href='client.html?id=${cs[i].id}' class='btn-editar'>Detail</a></td>`;
+            MyTBody += `<td><a class='linkBtn' href='newClient.html?id=${cs[i].id}&name=${cs[i].name}&email=${cs[i].email}&age=${cs[i].age}' class='btn-editar'>Edit</a></td>`;
+            MyTBody += `<td><button onclick='eliminarCliente(${cs[i].id})' class='btn-eliminar'>Delete</button></td>`;
             MyTBody += "</tr>";
          }
          $("#listaClientes").append(MyTBody);
@@ -51,7 +52,7 @@ function eliminarCliente(idCliente) {
    let dataToSend = JSON.stringify(data);
    //console.log(dataToSend);
    $.ajax({
-      url: `https://g32094389cdb338-cabana.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client`,
+      url: `https://gd548c9243e8650-g7ri4s1qk8952qk0.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client`,
       type: "DELETE",
       //   dataType : 'json',
       data: dataToSend,
@@ -90,7 +91,7 @@ function guardarCliente() {
    let dataToSend = JSON.stringify(data);
 
    $.ajax({
-      url: "https://g32094389cdb338-cabana.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
+      url: "https://gd548c9243e8650-g7ri4s1qk8952qk0.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
       type: "POST",
       data: dataToSend,
       contentType: 'application/json',
@@ -128,7 +129,7 @@ function editarCliente() {
    let dataToSend = JSON.stringify(data);
    //console.log(dataToSend);
    $.ajax({
-      url: "https://g32094389cdb338-cabana.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
+      url: "https://gd548c9243e8650-g7ri4s1qk8952qk0.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client",
       type: "PUT",
       //   dataType : 'json',
       data: dataToSend,

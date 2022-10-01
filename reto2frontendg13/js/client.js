@@ -35,26 +35,33 @@ window.onload = function () {
    if (valores) {
       // Extraemos los valores del array
       var id = valores['id'];
-      var name = valores['name'];
-      var email = valores['email'];
-      var age = valores['age'];
 
-      // Cargar las cajas de texto con los valores
-      $("#id").val(id);
-      $("#name").val(name);
-      $("#email").val(email);
-      $("#age").val(age);
+      //FUNCION GET
+      $.ajax({
+         url: `https://gd548c9243e8650-g7ri4s1qk8952qk0.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/client/client/${id}`,
+         type: "GET",
+         dataType: "json",
+         success: function (clientes) {
+            let cs = clientes.items;
+            let MyTBody = "";
 
-      // Desabilitar la caja de texto del 'id'
-      $("#id").prop('disabled', true);
-
-      // Cambiar título del formulario
-      $("#subTitle").text("Edit Client");
-
-      // Mostrar botón 'Editar' y ocultar 'Guardar'
-      $("#btnEditar").addClass("mostrar");
-      $("#btnGuardar").addClass("ocultar");
-      $("#linkBtnCancelar").addClass("mostrar");
+            $("#listaClientes").empty();
+            for (let i = 0; i < cs.length; i++) {
+               MyTBody += "<tr>";
+               MyTBody += "<th scope=\"row\" class=\"scope\">" + cs[i].id + "</th>";
+               MyTBody += `<th>${cs[i].name}</th>`;
+               MyTBody += "<th>" + cs[i].email + "</th>";
+               MyTBody += "<th>" + cs[i].age + "</th>";
+               MyTBody += "</tr>";
+               MyTBody += `<tr><td colspan="5">&nbsp;</td></tr>`;
+               MyTBody += `<tr><td colspan='5' class='centrarBotonCancelar'><a href='clients.html' class='linkBtn'>Back</a></td></tr>`;
+            }
+            $("#listaClientes").append(MyTBody);
+         },
+         error: function (xhr, status) {
+            alert('Ha ocurrido un problema');
+         }
+      });
    } else {
       // no se ha recibido ningun parametro por GET
       //document.write("No se ha recibido ningún parámetro");
